@@ -1,13 +1,180 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+// code
+
+model Hero {
+  id           Int               @id @default(autoincrement())
+  image        String?
+  release      DateTime?
+  quotes       Quote[]
+  emojiSets    EmojiSet[]
+  skills       Skill[]
+  genders      HeroGender[]
+  roles        HeroRole[]
+  species      HeroSpecies[]
+  translations HeroTranslation[]
+  DailyAnswer  DailyAnswer[]
+  Guess        Guess[]
+}
+
+model Quote {
+  id           Int                @id @default(autoincrement())
+  hero         Hero               @relation(fields: [heroId], references: [id])
+  heroId       Int
+  translations QuoteTranslation[]
+}
+
+model EmojiSet {
+  id        Int      @id @default(autoincrement())
+  hero      Hero     @relation(fields: [heroId], references: [id])
+  heroId    Int
+  emojis    Json
+  createdAt DateTime @default(now())
+}
+
+model Skill {
+  id           Int                @id @default(autoincrement())
+  hero         Hero               @relation(fields: [heroId], references: [id])
+  heroId       Int
+  keyButton    String
+  image        String?
+  translations SkillTranslation[]
+}
+
+model Role {
+  id           Int               @id @default(autoincrement())
+  translations RoleTranslation[]
+  heroes       HeroRole[]
+}
+
+model Gender {
+  id           Int                 @id @default(autoincrement())
+  translations GenderTranslation[]
+  heroes       HeroGender[]
+}
+
+model Species {
+  id           Int                  @id @default(autoincrement())
+  translations SpeciesTranslation[]
+  heroes       HeroSpecies[]
+}
+
+// pivots
+
+model HeroRole {
+  hero   Hero @relation(fields: [heroId], references: [id])
+  heroId Int
+  role   Role @relation(fields: [roleId], references: [id])
+  roleId Int
+
+  @@id([heroId, roleId])
+}
+
+model HeroGender {
+  hero     Hero   @relation(fields: [heroId], references: [id])
+  heroId   Int
+  gender   Gender @relation(fields: [genderId], references: [id])
+  genderId Int
+
+  @@id([heroId, genderId])
+}
+
+model HeroSpecies {
+  hero      Hero    @relation(fields: [heroId], references: [id])
+  heroId    Int
+  species   Species @relation(fields: [speciesId], references: [id])
+  speciesId Int
+
+  @@id([heroId, speciesId])
+}
+
+// translations
+
+model HeroTranslation {
+  id     Int    @id @default(autoincrement())
+  hero   Hero   @relation(fields: [heroId], references: [id])
+  heroId Int
+  locale String
+  name   String
+
+  @@unique([heroId, locale])
+}
+
+model QuoteTranslation {
+  id       Int     @id @default(autoincrement())
+  quote    Quote   @relation(fields: [quoteId], references: [id])
+  quoteId  Int
+  locale   String
+  text     String
+  audioUrl String?
+
+  @@unique([quoteId, locale])
+}
+
+model SkillTranslation {
+  id      Int    @id @default(autoincrement())
+  skill   Skill  @relation(fields: [skillId], references: [id])
+  skillId Int
+  locale  String
+  name    String
+
+  @@unique([skillId, locale])
+}
+
+model RoleTranslation {
+  id     Int    @id @default(autoincrement())
+  role   Role   @relation(fields: [roleId], references: [id])
+  roleId Int
+  locale String
+  name   String
+
+  @@unique([roleId, locale])
+}
+
+model GenderTranslation {
+  id       Int    @id @default(autoincrement())
+  gender   Gender @relation(fields: [genderId], references: [id])
+  genderId Int
+  locale   String
+  name     String
+
+  @@unique([genderId, locale])
+}
+
+model SpeciesTranslation {
+  id        Int     @id @default(autoincrement())
+  species   Species @relation(fields: [speciesId], references: [id])
+  speciesId Int
+  locale    String
+  name      String
+
+  @@unique([speciesId, locale])
+}
+
+// daily game and stats
+
+model DailyAnswer {
+  id       Int      @id @default(autoincrement())
+  date     DateTime
+  gameType String
+  hero     Hero     @relation(fields: [heroId], references: [id])
+  heroId   Int
+
+  @@unique([date, gameType])
+}
+
+model Guess {
+  id       Int      @id @default(autoincrement())
+  date     DateTime
+  gameType String
+  hero     Hero     @relation(fields: [heroId], references: [id])
+  heroId   Int
+  trials   Int
+}
