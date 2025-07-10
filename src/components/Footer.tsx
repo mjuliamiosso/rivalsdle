@@ -2,7 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer className='container mx-auto italic text-base text-center lg:text-right'>
+        <p>Fan-made. All rights to Marvel.</p>
+    </footer>
   )
 }
 
