@@ -29,7 +29,7 @@ const SelectGameMode: FC<SelectGameModeProps> = ({
       </div>
 
       {/* Text */}
-      <div className="lg:text-center">
+      <div className="lg:text-center italic">
         <p className="text-xl uppercase font-bold lg:text-2xl lg:-ml-3.5">
           {mode}
         </p>
