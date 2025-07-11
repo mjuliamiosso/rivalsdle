@@ -6,14 +6,23 @@
   color: var(--text-color);
 }
 
-body{
+body {
   background: var(--background-color);
 }
 
-:root{
+:root {
   --background-color: #191928;
   --text-color: #fff;
-  --green: #5A9A30;
-  --orange: #C87A1D;
-  --red: #B83535;
+  --green: #5a9a30;
+  --orange: #c87a1d;
+  --red: #b83535;
+}
+
+.modeShape {
+  clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+
+.modeShape{
+
 }
