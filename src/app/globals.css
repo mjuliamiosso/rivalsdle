@@ -22,6 +22,10 @@ body {
   clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
 }
 
+.classicShape{
+  clip-path: polygon(9% 0, 100% 0, 91% 7%, 91% 100%, 0 100%, 9% 93%);
+}
+
 .marvelBackground {
   background-image: url("/hero-bg.png");
   background-position: center;

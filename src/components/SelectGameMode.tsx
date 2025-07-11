@@ -19,7 +19,7 @@ const SelectGameMode: FC<SelectGameModeProps> = ({
 }) => {
   return (
     <Link
-      className="flex flex-row-reverse items-center modeShape w-[350px] justify-between px-10 py-2 cursor-pointer lg:flex-col lg:py-10 lg:px-0 lg:w-[280px] lg:justify-start lg:gap-5 bg-no-repeat bg-cover bg-center"
+      className="modeShape flex flex-row-reverse items-center w-[350px] justify-between px-10 py-2 cursor-pointer lg:flex-col lg:py-10 lg:px-0 lg:w-[280px] lg:justify-start lg:gap-5 bg-no-repeat bg-cover bg-center"
       style={{ backgroundImage: `url(${background})` }}
       href={link}
     >
