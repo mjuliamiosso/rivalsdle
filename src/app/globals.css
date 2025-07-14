@@ -28,6 +28,10 @@ body {
   clip-path: polygon(9% 0, 100% 0, 91% 7%, 91% 100%, 0 100%, 9% 93%);
 }
 
+.hintShape {
+  clip-path: polygon(5% 0, 100% 0, 95% 10%, 95% 100%, 0 100%, 5% 90%);
+}
+
 .searchShape {
   clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
 }
