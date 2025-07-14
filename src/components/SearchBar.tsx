@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useRef } from "react";
 import { IoSearchSharp } from "react-icons/io5";
@@ -23,7 +23,6 @@ const SearchBar = () => {
       <button
         ref={buttonRef}
         className="searchButtonShape -ml-[16px] flex items-center text-xl justify-center bg-[var(--background-color)] w-[72.71px] h-[40px] hover:bg-[#282836] cursor-pointer"
-        onClick={() => {}}
       >
         <IoSearchSharp />
       </button>

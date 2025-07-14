@@ -18,23 +18,60 @@ body {
   --red: #b83535;
 }
 
+/* Polygon Shapes */
+
 .modeShape {
   clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
 }
 
-.classicShape{
+.classicShape {
   clip-path: polygon(9% 0, 100% 0, 91% 7%, 91% 100%, 0 100%, 9% 93%);
 }
 
+.searchShape {
+  clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.searchButtonShape {
+  clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
+}
+
+/* Backgrounds */
 .marvelBackground {
   background-image: url("/hero-bg.png");
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.modesBackground {
+  background-image: url("/modes-bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Square Block */
+
+.square {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+}
+
+/* Responsive */
 
 @media (min-width: 1024px) {
   .modeShape {
     clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
   }
+
+  .modesBackground {
+  background-image: url("/modes-bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% cover;
+}
 }

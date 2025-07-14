@@ -34,7 +34,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="marvelBackground">
+    <section className="marvelBackground">
       <div className="container mx-auto px-5 flex flex-col gap-6 items-center justify-center h-screen ">
         {/* Logo */}
         <div className="relative w-[350px] h-[100px] lg:w-[500px] lg:h-[130px]">
@@ -62,6 +62,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
