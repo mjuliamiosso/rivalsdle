@@ -41,35 +41,35 @@ const ClassicAnswer: FC<ClassicAnswerProps> = ({
       </div>
       {/* Gender */}
       <p
-        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic"
+        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic text-center"
         style={{ backgroundColor: `${genderColor}` }}
       >
         {gender}
       </p>
       {/* Role */}
       <p
-        className="classicShape px-2 text-center w-[89.5px] h-[75px] flex items-center justify-center italic"
+        className="classicShape px-2 text-center w-[89.5px] h-[75px] flex items-center justify-center italic text-center"
         style={{ backgroundColor: `${roleColor}` }}
       >
         {role}
       </p>
       {/* Alignment */}
       <p
-        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic"
+        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic text-center"
         style={{ backgroundColor: `${alignmentColor}` }}
       >
         {alignment}
       </p>
       {/* Species */}
       <p
-        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic"
+        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic text-center"
         style={{ backgroundColor: `${speciesColor}` }}
       >
         {species}
       </p>
       {/* Release */}
       <p
-        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic"
+        className="classicShape px-2 w-[89.5px] h-[75px] flex items-center justify-center italic text-center"
         style={{ backgroundColor: `${releaseColor}` }}
       >
         {release}
