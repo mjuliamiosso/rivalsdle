@@ -27,7 +27,7 @@ const answers = [
 const page = () => {
   return (
     <section className="modesBackground">
-      <div className="container mx-auto pt-20 px-5 flex flex-col gap-6 items-center min-h-screen">
+      <div className="container mx-auto py-20 px-5 flex flex-col gap-6 items-center min-h-screen">
         {/* Logo + Nav */}
         <div className="flex flex-col items-center">
           {/* Logo */}

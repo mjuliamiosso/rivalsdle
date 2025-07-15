@@ -45,12 +45,79 @@ const answers = [
     release: "2024",
     releaseColor: "#5a9a30",
   },
+  {
+    character: "/spider-man.jpg",
+    gender: "Male",
+    genderColor: "#5a9a30",
+    role: "Duelist",
+    roleColor: "#5a9a30",
+    alignment: "Hero",
+    alignmentColor: "#5a9a30",
+    species: "Human",
+    speciesColor: "#5a9a30",
+    release: "2024",
+    releaseColor: "#5a9a30",
+  },
+  {
+    character: "/spider-man.jpg",
+    gender: "Male",
+    genderColor: "#5a9a30",
+    role: "Duelist",
+    roleColor: "#5a9a30",
+    alignment: "Hero",
+    alignmentColor: "#5a9a30",
+    species: "Human",
+    speciesColor: "#5a9a30",
+    release: "2024",
+    releaseColor: "#5a9a30",
+  },
+
+  {
+    character: "/spider-man.jpg",
+    gender: "Male",
+    genderColor: "#5a9a30",
+    role: "Duelist",
+    roleColor: "#5a9a30",
+    alignment: "Hero",
+    alignmentColor: "#5a9a30",
+    species: "Human",
+    speciesColor: "#5a9a30",
+    release: "2024",
+    releaseColor: "#5a9a30",
+  },
+  {
+    character: "/spider-man.jpg",
+    gender: "Male",
+    genderColor: "#5a9a30",
+    role: "Duelist",
+    roleColor: "#5a9a30",
+    alignment: "Hero",
+    alignmentColor: "#5a9a30",
+    species: "Human",
+    speciesColor: "#5a9a30",
+    release: "2024",
+    releaseColor: "#5a9a30",
+  },
+  {
+    character: "/spider-man.jpg",
+    gender: "Male",
+    genderColor: "#5a9a30",
+    role: "Duelist",
+    roleColor: "#5a9a30",
+    alignment: "Hero",
+    alignmentColor: "#5a9a30",
+    species: "Human",
+    speciesColor: "#5a9a30",
+    release: "2024",
+    releaseColor: "#5a9a30",
+  },
+  
 ];
 
 const page = () => {
   return (
     <section className="modesBackground">
-      <div className="container mx-auto pt-20 px-5 flex flex-col gap-6 items-center min-h-screen">
+      <div className="container mx-auto py-20 px-5 flex flex-col gap-6 items-center min-h-screen">
         {/* Logo + Nav */}
         <div className="flex flex-col items-center">
           {/* Logo */}
