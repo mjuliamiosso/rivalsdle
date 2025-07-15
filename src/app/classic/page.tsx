@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import SearchBar from "@/components/SearchBar";
 import ModeNav from "@/components/ModeNav";
+import Link from "next/link";
 
 const answers = [
   {
@@ -53,14 +54,17 @@ const page = () => {
         {/* Logo + Nav */}
         <div className="flex flex-col items-center">
           {/* Logo */}
-          <div className="relative w-[350px] h-[100px] lg:w-[500px] lg:h-[130px]">
+          <Link
+            className="relative w-[350px] h-[100px] lg:w-[500px] lg:h-[130px]"
+            href={"/"}
+          >
             <Image
               layout="fill"
               src={"/logo-white.png"}
               alt="logo"
               className="object-contain"
             ></Image>
-          </div>
+          </Link>
           {/* Nav */}
           <ModeNav />
         </div>

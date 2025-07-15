@@ -1,8 +1,9 @@
-import HintCard from '@/components/HintCard'
-import ModeNav from '@/components/ModeNav'
-import SearchBar from '@/components/SearchBar'
-import React from 'react'
-import Image from 'next/image'
+import HintCard from "@/components/HintCard";
+import ModeNav from "@/components/ModeNav";
+import SearchBar from "@/components/SearchBar";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -11,25 +12,28 @@ const page = () => {
         {/* Logo + Nav */}
         <div className="flex flex-col items-center">
           {/* Logo */}
-          <div className="relative w-[350px] h-[100px] lg:w-[500px] lg:h-[130px]">
+          <Link
+            className="relative w-[350px] h-[100px] lg:w-[500px] lg:h-[130px]"
+            href={"/"}
+          >
             <Image
               layout="fill"
               src={"/logo-white.png"}
               alt="logo"
               className="object-contain"
             ></Image>
-          </div>
+          </Link>
           {/* Nav */}
           <ModeNav />
         </div>
 
         {/* Text */}
         <p className="text-xl font-bold italic uppercase text-center">
-          A line from the multiverse... Who said it?
+          Only emojis… but can you crack it?
         </p>
 
         {/* Hint Balloon */}
-        <HintCard>teste</ HintCard>
+        <HintCard>teste</HintCard>
 
         {/* Search Bar */}
         <SearchBar />
@@ -46,7 +50,7 @@ const page = () => {
         <div className="flex flex-col gap-3"></div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default page
+export default page;
