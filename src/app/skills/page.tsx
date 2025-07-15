@@ -4,6 +4,25 @@ import SearchBar from "@/components/SearchBar";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Answer from "@/components/Answer";
+
+const answers = [
+  {
+    character: "/spider-man.jpg",
+    name: "Spider-Man",
+    nameBackground: "#5a9a30",
+  },
+  {
+    character: "/spider-man.jpg",
+    name: "Spider-Man",
+    nameBackground: "#5a9a30",
+  },
+  {
+    character: "/spider-man.jpg",
+    name: "Spider-Man",
+    nameBackground: "#5a9a30",
+  },
+];
 
 const page = () => {
   return (
@@ -47,7 +66,16 @@ const page = () => {
         </div>
 
         {/* Guesses */}
-        <div className="flex flex-col gap-3"></div>
+        <div className="flex flex-col gap-3">
+          {answers.map((answers, index) => (
+            <Answer
+              key={index}
+              character={answers.character}
+              name={answers.name}
+              nameBackground={answers.nameBackground}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
